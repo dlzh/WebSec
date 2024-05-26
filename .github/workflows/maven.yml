@@ -36,7 +36,7 @@ jobs:
           image: dlzhang532/websec
           tags: v1, latest
           registry: registry-url.io
-          #dockerfile: Dockerfile.ci
+          dockerfile: Dockerfile.ci
           username: ${{ secrets.docker.DOCKER_USERNAME }}
           password: ${{ secrets.docker.DOCKER_PASSWORD }}
 
