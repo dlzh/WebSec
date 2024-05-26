@@ -31,7 +31,7 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Check credential
-        run: 'echo "DOCKER_PASSWORD"; echo "DOCKER_USERNAME";'
+        run: 'echo "$DOCKER_PASSWORD"; echo "$DOCKER_USERNAME";'
         shell: bash
         env:
           DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
