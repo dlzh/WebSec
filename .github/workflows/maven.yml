@@ -37,8 +37,8 @@ jobs:
           tags: v1, latest
           registry: registry-url.io
           dockerfile: Dockerfile.ci
-          username: ${{ secrets.docker.DOCKER_USERNAME }}
-          password: ${{ secrets.docker.DOCKER_PASSWORD }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
       # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
       #- name: Update dependency graph
