@@ -31,10 +31,11 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Check credential
-        run: 'echo "$SSH_KEY" > key'
+        run: 'echo "DOCKER_PASSWORD"; echo "DOCKER_USERNAME";'
         shell: bash
         env:
-          SSH_KEY: ${{secrets.SSH_KEY}}
+          DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+          DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
 
       - name: Build and push docker image01
         uses: mr-smithers-excellent/docker-build-push@v6
