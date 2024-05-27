@@ -10,7 +10,6 @@ phases:
       - REPOSITORY_URI=896512559422.dkr.ecr.ap-southeast-2.amazonaws.com/cicd
       - echo setting image tag ....
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
-
   build:
     commands:
       - echo building and tagging started image on `date`
@@ -20,7 +19,6 @@ phases:
       - docker build -t $REPOSITORY_URI:latest .
       - echo tagging the Docker image...
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
-
   post_build:
     commands:
       - echo pushing Docker image to Aamazon ECR started on `date`
@@ -34,7 +32,6 @@ phases:
       - echo $DOCKER_CONTAINER_NAME
       - echo printing imagedefinitoins.json
       - cat imagedefinitions.json
-
 artifacts:
   files:
     - imagedefintions.json
