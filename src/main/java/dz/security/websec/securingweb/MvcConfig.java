@@ -1,4 +1,4 @@
-package dz.security.WebSec.securingweb;
+package dz.security.websec.securingweb;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

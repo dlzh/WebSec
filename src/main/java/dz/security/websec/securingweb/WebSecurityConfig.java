@@ -1,4 +1,4 @@
-package dz.security.WebSec.securingweb;
+package dz.security.websec.securingweb;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
